@@ -1,0 +1,26 @@
+html {
+    background-color: aquamarine;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+textarea {
+    height: 50px;
+}
+
+#mytable {
+    background-color: white;
+    border-radius: 2%;
+    padding: 10px;
+}

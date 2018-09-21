@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="screen.css" />
+</head>
+
+<body>
+    <main>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Let us know how to improve Lynda.</p>
+        <div id="mytable">
+            <form id="survey-form" action="/action_page.php">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name" id="name-label">
+                                *Name:
+                            </label>
+                        </td>
+                        <td>
+                            <input autofocus type="text" name="name" id="name" placeholder="Enter your Full Name"
+                                required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email" id="email-label">
+                                *Email
+                            </label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Enter your Email Address" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="number" id="number-label">
+                                *Age:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="number" name="age" min="0" max="115" placeholder="Age" id="number" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dob" id="dob-label">
+                                *Date of Birth
+                            </label>
+                        </td>
+                        <td>
+                            <input type="date" name="dob" id="dob" placeholder="Date of Birth" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Which option best describes your current role ?
+                        </td>
+                        <td>
+                            <select name="state" onchange='checkother(this.value);'>
+                                <option value="Student">
+                                    Student
+                                </option>
+                                <option value="Full-time job">
+                                    Full time job
+                                </option>
+                                <option value="Full-time learner">
+                                    Full time learner
+                                </option>
+                                <option value="Prefer not to say">
+                                    Prefer not to say
+                                </option>
+                                <option value="Other">
+                                    Other
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="Othertext">
+                    </tr>
+                    <tr>
+                        <td>How likely is that you would recommend Lynda to a friend?</td>
+                        <td>
+                            <label for="maybe">Maybe</label>
+                            <input type="radio" value="Maybe" name="how" id="maybe">
+                            <label for="definitely">Definitely</label>
+                            <input type="radio" value="Definitely" name="how" id="definitely">
+                            <label for="notsure">Not Sure</label>
+                            <input type="radio" value="Not Sure" name="how" id="notsure">
+                            <label for="hellno">Very Unlikely</label>
+                            <input type="radio" value="Hell No" name="how" id="hellno">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            What do you like most in Lynda:
+                        </td>
+                        <td>
+                            <select name="likemost" id="dropdown">
+                                <option value="Challenges">
+                                    Challenges
+                                </option>
+                                <option value="Projects">
+                                    Projects
+                                </option>
+                                <option value="Community">
+                                    Community
+                                </option>
+                                <option value="Instructors">
+                                    Instructors
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Things that should be improved in the future
+                            (Check all that apply): </td>
+                        <td>
+                            <input type="checkbox" value="Front-end Projects" name="sugg" id="fe">
+                            <label for="fe">Front-end Projects</label><br>
+                            <input type="checkbox" value="Back-end Projects" name="sugg" id="be">
+                            <label for="be">Back-end Projects</label><br>
+                            <input type="checkbox" value="Data Visualization" name="sugg" id="dv">
+                            <label for="dv">Data Visualization</label><br>
+                            <input type="checkbox" value="Challenges" name="sugg" id="chal">
+                            <label for="chal">Challenges</label><br>
+                            <input type="checkbox" value="Videos" name="sugg" id="vid">
+                            <label for="vid">Videos</label><br>
+                            <input type="checkbox" value="Additional Courses" name="sugg" id="ac">
+                            <label for="ac">Additional Courses</label><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="ta" id="ta-label">
+                                Any Comments or Suggestions ?
+                            </label>
+                        </td>
+                        <td><textarea name="comment" placeholder="Comments or Suggestions" id="ta"></textarea></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <input type="submit" id=submit> </td>
+                        <td> <input type="reset"> </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        function checkother(val) {
+            var element = document.getElementById("Othertext");
+            if (val == 'Other')
+                element.innerHTML = "<td>Please be more specific:</td><td><input type='text' id='bms' name='Other'/></td>";
+            else
+                element.innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
