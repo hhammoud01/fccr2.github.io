@@ -18,6 +18,7 @@ textarea {
 
 .va {
     vertical-align: top;
+    padding: 0;
 }
 
 tr>td {
