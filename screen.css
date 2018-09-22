@@ -16,6 +16,14 @@ textarea {
     height: 50px;
 }
 
+.va {
+    vertical-align: top;
+}
+
+tr>td {
+    padding-bottom: 0.9em;
+}
+
 #mytable {
     background-color: white;
     border-radius: 2%;
