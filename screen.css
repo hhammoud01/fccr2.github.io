@@ -3,9 +3,6 @@ html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
-    margin: 15px;
-}
 
 h1 {
     text-align: center;
@@ -22,6 +19,7 @@ textarea {
 #mytable {
     background-color: white;
     border-radius: 2%;
-    padding: 10%;
-    margin: 10%;
+    width: 70%;
+    padding: 10px;
+    margin: auto;
 }
